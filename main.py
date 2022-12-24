@@ -1,5 +1,4 @@
 import random
-import time
 
 def main():
     """The main function that generates random number and id-s where you specific the number or id lenght"""
@@ -16,6 +15,7 @@ enter your number lenght -ex. 34
 type & and lenght id: -ex.&34
 quit = to QUIT
 show - to show all numbers and id-s
+write - write all the numbers to a file(numbers.txt)
 command:: """)
         numbers = [0,1,2,3,4,5,6,7,8,9]
         l = []
@@ -26,6 +26,14 @@ command:: """)
             print("")
             print("Goodbye  :)) ")
             break
+        
+        if inp == 'write':
+            print()
+            with open('numbers.txt','w') as file:
+                for c in codes:
+                    file.write(str(c) + '\n') 
+                file.close()
+            print("Succesfully wrote the numbers in the numbers.txt file!")
         
         # Here is the program that it's running if you don't type any command
         if inp == '':
@@ -65,7 +73,7 @@ command:: """)
                 print("")
                 print(f"YOUR NUMBER IS: {num}")
             # Excepting Value Error
-            except ValueError :
+            except ValueError:
                     print("")
                     print("You can not add a string")
     
