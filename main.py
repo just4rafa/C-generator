@@ -12,7 +12,7 @@ def main():
         inp = input("""
 (INFO) - DON'T PRESS JUST &, THE PROGRAM WILL CRASH!!!
 enter your number lenght -ex. 34
-type & and lenght id: -ex.&34
+type & and lenght id: -ex. 34
 quit = to QUIT
 show - to show all numbers and id-s
 write - write all the numbers to a file(numbers.txt)
